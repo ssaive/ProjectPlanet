@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="styles/jquery-ui.css"/>
+<link rel="stylesheet" type="text/css" href="styles/mystyle.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="scripts/jquery-1.12.1.js"></script>
+<script src="scripts/jquery-ui.js"></script>
+<script src="scripts/master.js"></script>
+</head>
+<body id="main-body">
+	<header>
+		<div id="header-content">
+		<div id="department-title"><b>Inter-Planetary Wimbledon Championship</b></div>
+		</div>
+	</header>
+<div class="tabbed">
+   
+   		<input name="tabbed" id="tabbed1" type="radio" checked>
+      <section>
+        <h1>
+          <label for="tabbed1">About</label>
+        </h1>
+        <div>
+        The Inter-Planetary Wimbledon Championship was established in May,2250. It strives to bring the best of the game to all the planets.       </div>
+      </section>
+   
+  		 <input name="tabbed" id="tabbed2" type="radio">
+      <section>
+        <h1>
+          <label for="tabbed2">Player details Table</label>
+        </h1>
+     <div id="table_tab">
+    
+
+
+<div class="table_area"> 
+<h1>This year's contestants are listed below.  </h1> 
+<table id="my_table">
+<thead>
+<tr>
+	<th align="left">First Name</th>
+	<th align="left">Last Name</th>
+	<th align="left">Home</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+</div>
+
+<script>
+var jsonObj = [
+ { "first_name" : "Rose",
+   "last_name"  : "Tyler",
+   "home"       : "Earth" },
+ { "first_name" : "Zoe",
+   "last_name"  : "Heriot",
+   "home"       : "Space Station W3"},
+ { "first_name" : "Jo",
+   "last_name"  : "Grant",
+   "home"       : "Earth"},
+ { "first_name" : "Leela",
+   "last_name"  : null,
+   "home"       : "Unspecified"},
+ { "first_name" : "Romana",
+   "last_name"  : null,
+   "home"       : "Gallifrey"},
+ { "first_name" : "Clara",
+   "last_name"  : "Oswald",
+   "home"       : "Earth"},
+ { "first_name" : "Adric",
+   "last_name"  : null,
+   "home"       : "Alzarius"},
+ { "first_name" : "Susan",
+   "last_name"  : "Foreman",
+   "home"       : "Gallifrey"}
+ ];
+var jsonString = JSON.stringify(jsonObj)
+var jsonArray = JSON.parse(jsonString);
+var cols = ['first_name','last_name','home']; //the index reference is tied to the name from the obj def
+
+table = document.getElementById("my_table").getElementsByTagName('tbody')[0]; //need to reference tbody, since default is thead
+
+
+
+       for(var i = 0;i < jsonArray.length; i++)
+           {
+               // create a new row
+               var newRow = table.insertRow(-1); //always insert at the end
+
+               for(var j = 0;j < cols.length; j++)
+               {
+                   // create a new cell
+                   var cell = newRow.insertCell(j);
+                   
+                   // add value to the cell
+                   cell.innerHTML = jsonArray[i][cols[j]];
+;
+               }
+           }
+        </script>
+
+</div>
+     
+</section>
+     
+<input name="tabbed" id="tabbed3" type="radio">
+      <section>
+        <h1>
+          <label for="tabbed3">Schedule</label>
+        </h1>
+        
+<div>
+     2287 Inter-Planetary Wimbledon Championships will begin on  <br>  
+Monday, July 2  <br>  
+and ends on  <br>  
+Sunday, July 15  <br>   </div>
+      </section>
+     
+<input name="tabbed" id="tabbed4" type="radio">
+      <section>
+        <h1>
+          <label for="tabbed4">Contact</label>
+        </h1>
+        <div>
+          For any queries, please contact :     <br>  
+Sanjana Krishna Saive,  <br>  
+Ph# xxx-xxx-xxxx <br>    
+Planet code : +3 [Earth]  <br>
+Country code : 1 [USA]  <br>
+email : ssaive@earth.com
+ </div>
+      </section>
+    
+</div>
+  
+
+
+        
+</body>
+
+
+
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,44 @@
+CREATE TABLE MyTable(
+   first_name TEXT,
+   last_name TEXT,
+   home TEXT,
+   PRIMARY KEY(first_name,home)
+);
+
+INSERT INTO MyTable(
+ first_name,
+ last_name,
+ home)
+VALUES
+ (
+ "Rose",
+ "Tyler",
+ "Earth"),
+ (
+ "Zoe",
+ "Heriot",
+ "Space Station W3"),
+(
+ "Jo",
+ "Grant" ,
+ "Earth"),
+ (
+ "Leela",
+ null,
+ "Unspecified"),
+ (
+ "Romana",
+ null,
+ "Gallifrey"),
+ (
+ "Clara",
+ "Oswald",
+ "Earth"),
+ (
+ "Adric",
+ null,
+ "Alzarius"), 
+(
+ "Susan",
+ "Foreman",
+ "Gallifrey");
